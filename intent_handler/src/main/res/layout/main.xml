@@ -9,5 +9,12 @@
     android:layout_height="wrap_content"
     android:text="Hello World, IntentHandler"
     />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Send Message"
+        android:id="@+id/button"
+        android:onClick="sendMessageButtonClicked" />
 </LinearLayout>
 
