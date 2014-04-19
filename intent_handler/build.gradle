@@ -36,4 +36,16 @@ apply plugin: 'android'
 android {
     compileSdkVersion 13
 }
- 
+
+repositories {
+    maven {
+        url 'https://github.com/rosjava/rosjava_mvn_repo/raw/master'
+    }
+    mavenCentral()
+}
+
+dependencies {
+    compile 'org.ros.android_core:android_gingerbread_mr1:0.1.+'
+    compile 'org.ros.android_core:android_honeycomb_mr2:0.1.+'
+    compile 'org.ros.rosjava_core:rosjava:0.1.+'
+}
