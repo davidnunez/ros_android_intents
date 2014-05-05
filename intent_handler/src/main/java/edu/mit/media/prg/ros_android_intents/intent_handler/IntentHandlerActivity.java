@@ -38,10 +38,6 @@ public class IntentHandlerActivity extends RosActivity {
         super("IntentHandler", "IntentHandler");
     }
 
-    @Override
-    public void onDestroy() {
-        unregisterReceiver(myReceiver);
-    }
 
     /**
      * Called when the activity is first created.
@@ -49,10 +45,15 @@ public class IntentHandlerActivity extends RosActivity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         registerReceiver(myReceiver, new IntentFilter("edu.mit.media.prg.ros_android_intents.intent_to_ros"));
-
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
     }
+
+    @Override
+    public void onDestroy() {
+        unregisterReceiver(myReceiver);
+    }
+
 
     public void sendMessageButtonClicked(View unused) {
         talker.publish("Send Message Button Clicked!");
@@ -62,10 +63,10 @@ public class IntentHandlerActivity extends RosActivity {
     @Override
     protected void init(NodeMainExecutor nodeMainExecutor) {
         talker = new Talker();
-        talker.setGraphName("ros_android_intents/talker/1");
+        talker.setGraphName(getString(R.string.graphNameTalker));
 
         listener = new Listener();
-        listener.setGraphName("ros_android_intents/listener/1");
+        listener.setGraphName(getString(R.string.graphNameListener));
         listener.setContext(getApplicationContext());
 
         NodeConfiguration nodeConfiguration = NodeConfiguration.newPublic(InetAddressFactory.newNonLoopback().getHostAddress().toString(), getMasterUri());
