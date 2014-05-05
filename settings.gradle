@@ -1,3 +1,4 @@
+include ':broadcast_demo'
 /*
  * Copyright (C) 2014 prg
  *
