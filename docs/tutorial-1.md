@@ -103,6 +103,14 @@ Additional References and Notes:
 
 - [A good description of Android Broadcast Intents and Receivers][7]
 
+- https://github.com/intrications/intent-intercept
+- https://github.com/personal-robots/machine_config "machine_config"
+- http://wiki.ros.org/android/Tutorials/hydro/Installation%20-%20Ros%20Development%20Environment
+- http://developer.android.com/sdk/installing/studio.html#download
+- https://github.com/rosjava/android_core/issues/198
+- https://code.google.com/p/android/issues/detail?id=61573#c19
+- http://www.techotopia.com/index.php/Android_Broadcast_Intents_and_Broadcast_Receivers
+
 [1]:	https://github.com/intrications/intent-intercept
 [2]:	https://github.com/personal-robots/machine_config "machine_config"
 [3]:	http://wiki.ros.org/android/Tutorials/hydro/Installation%20-%20Ros%20Development%20Environment
