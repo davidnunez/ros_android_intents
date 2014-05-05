@@ -2,12 +2,13 @@ package edu.mit.media.prg.ros_android_intents.intent_handler;
 
 /**
  * Created by prg on 4/19/14.
+ *
+ * Talker publishes strings to ROS messages
+ *
  */
-import org.ros.concurrent.CancellableLoop;
 import org.ros.namespace.GraphName;
 import org.ros.node.AbstractNodeMain;
 import org.ros.node.ConnectedNode;
-import org.ros.node.NodeMain;
 import org.ros.node.topic.Publisher;
 
 public class Talker extends AbstractNodeMain {

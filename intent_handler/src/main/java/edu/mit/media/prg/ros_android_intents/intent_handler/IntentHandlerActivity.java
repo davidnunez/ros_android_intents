@@ -1,25 +1,16 @@
 package edu.mit.media.prg.ros_android_intents.intent_handler;
 
-import android.app.Activity;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
-import android.view.Window;
-import android.widget.TextView;
 
 import org.ros.address.InetAddressFactory;
 import org.ros.android.RosActivity;
-import org.ros.message.MessageListener;
-import org.ros.node.DefaultNodeFactory;
-import org.ros.node.Node;
 import org.ros.node.NodeConfiguration;
-import org.ros.node.NodeMain;
 import org.ros.node.NodeMainExecutor;
-import org.ros.node.topic.Subscriber;
 
 public class IntentHandlerActivity extends RosActivity {
     private Talker talker;

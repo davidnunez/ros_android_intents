@@ -1,7 +1,10 @@
 package edu.mit.media.prg.ros_android_intents.intent_handler;
 
 /**
- * Created by prg on 4/19/14.
+ * Created by davidnunez on 4/19/14.
+ *
+ * Listener subscribes to ROS messages and translates them into Android Intents
+ *
  */
 import android.content.Context;
 import android.content.Intent;
@@ -14,12 +17,10 @@ import org.ros.node.ConnectedNode;
 import org.ros.node.NodeMain;
 import org.ros.node.topic.Subscriber;
 
-/**
- * A simple {@link Subscriber} {@link NodeMain}.
- *
- * @author damonkohler@google.com (Damon Kohler)
- */
 public class Listener extends AbstractNodeMain {
+    private Context context;
+    private String graphName;
+
     public Context getContext() {
         return context;
     }
@@ -27,9 +28,6 @@ public class Listener extends AbstractNodeMain {
     public void setContext(Context context) {
         this.context = context;
     }
-
-    private Context context;
-    private String graphName;
 
     public String getGraphName() {
         return graphName;
