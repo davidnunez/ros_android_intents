@@ -4,5 +4,9 @@
     <string name="app_name">Broadcast Demo</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+    <string name="btnBroadcastString">Broadcast String</string>
+    <string name="btnBroadcastInt">Broadcast Int</string>
+    <string name="intent_to_ros">intent_to_ros</string>
+    <string name="ros_to_intent">ros_to_intent</string>
 
 </resources>

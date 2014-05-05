@@ -9,8 +9,73 @@
     tools:context="edu.mit.media.prg.ros_android_intents.broadcast_demo.MainActivity">
 
     <TextView
-        android:text="@string/hello_world"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:text="Listens for: edu.mit.media.prg.ros_android_intents.ros_to_intent"
+        android:id="@+id/textView" />
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/textView"
+        android:layout_marginTop="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Broadcast To:\n edu.mit.media.prg.ros_android_intents."
+            android:id="@+id/textView2" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/intent_to_ros"
+            android:id="@+id/radioIntentToRos"
+            android:checked="true" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ros_to_intent"
+            android:id="@+id/radioRosToIntent"
+            android:checked="false" />
+
+    </RadioGroup>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editTextString"
+        android:inputType="text"
+        android:layout_above="@+id/button"
+        android:layout_alignParentLeft="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/btnBroadcastString"
+        android:id="@+id/button"
+        android:onClick="onClickBtnBroadcastString"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editTextInt"
+        android:inputType="number"
+        android:layout_below="@+id/button"
+        android:layout_alignParentLeft="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/btnBroadcastInt"
+        android:id="@+id/button2"
+        android:onClick="onClickBtnBroadcastInt"
+        android:layout_below="@+id/editTextInt"
+        android:layout_alignParentLeft="true" />
+
 
 </RelativeLayout>
