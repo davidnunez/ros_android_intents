@@ -34,23 +34,26 @@
 
 		1. Get JDK:
 
-				$ sudo apt-get update
-				$ sudo apt-get install openjdk-7-jdk
-				$ sudo add-apt-repository ppa:webupd8team/java -y
-				$ sudo apt-get update
-				$ sudo apt-get install oracle-java7-installer
+				sudo add-apt-repository ppa:webupd8team/java -y
+				sudo apt-get update
+				sudo apt-get install openjdk-7-jdk
+				sudo apt-get install oracle-java7-installer
 				# Switch back to openjdk anytime with sudo update-alternatives --config java
 
-2. Download [Android Studio Bundle][4] (_as of 2014-05-05, version 135-1078000_) to `~/Downloads`
-	3. untar the download and add it to your path:
+		2. Download [Android Studio Bundle][4] (_as of 2014-05-05, version 135-1078000_) to `~/Downloads`
+		3. untar the download and add it to your path:
 
-			$ cd ~/Downloads
-			$ sudo tar -zxvf android-studio-bundle-135.1078000-linux.tgz -C /opt/
-			$ sudo chown -R prg:prg /opt/android-studio/
-			$ echo export PATH=\${PATH}:/opt/android-studio/sdk/tools:/opt/android-studio/sdk/platform-tools:/opt/android-studio/bin >> ~/.bashrc
-			$ echo export ANDROID_HOME=/opt/android-studio/sdk >> ~/.bashrc
-			$ source ~/.bashrc
+				cd ~/Downloads
+				sudo tar -zxvf android-studio-bundle-135.1078000-linux.tgz -C /opt/
+				sudo chmod -R 755 /opt/android-studio
+				sudo chmod -R +x /opt/android-studio
+				sudo chown -R root:root /opt/android-studio
+				echo export PATH=\${PATH}:/opt/android-studio/sdk/tools:/opt/android-studio/sdk/platform-tools:/opt/android-studio/bin >> ~/.bashrc
+				echo export ANDROID_HOME=/opt/android-studio/sdk >> ~/.bashrc
+				source ~/.bashrc
+		
 		- Open the Android SDK manager and install (_this step takes a while_):
+
 			- SDK Build Tools 19.0.2
 			- SDK Build Tools 19.0.3
 			- Android API 10
@@ -59,30 +62,30 @@
 			- Android API 16
 			- Android API 18
 
-					$ android
+					sudo /opt/android-studio/sdk/tools/android
 		- Launch Android Studio and update the first time
 
-				$ studio.sh
+				sudo /opt/android-studio/bin/studio.sh
 			- if you are asked if you want to keep your previous Android Studio settings, you may say “no”
 			- click on “Check for update” link at the bottom of the window and apply any upgrades
 			- Exit studio
 		- Install Ros Java (\_Note: the catkin\_make step takes a while):
 
-				$ sudo apt-get install ros-hydro-catkin ros-hydro-ros ros-hydro-rosjava python-wstool
-				$ mkdir -p ~/android
-				$ wstool init -j4 ~/android/src https://raw.github.com/rosjava/rosjava/hydro/android_core.rosinstall
-				$ source /opt/ros/hydro/setup.bash
-				$ cd ~/android
-				$ catkin_make
+				sudo apt-get install ros-hydro-catkin ros-hydro-ros ros-hydro-rosjava python-wstool
+				mkdir -p ~/android
+				wstool init -j4 ~/android/src https://raw.github.com/rosjava/rosjava/hydro/android_core.rosinstall
+				source /opt/ros/hydro/setup.bash
+				cd ~/android
+				catkin_make
 3. Get ros\_android\_intents project
 
-		$ cd ~/android/src/
-		$ git clone https://github.com/davidnunez/ros_android_intents
+		cd ~/android/src/
+		git clone https://github.com/personal-robots/ros_android_intents
  4. launch Android Studio
 
-		$ studio.sh
+		studio.sh
 4. **Import** `~/android/src/ros_android_intents` as a new project
-	- When selecting the location of the project, choose the root folder `~/android/src/rs_android_intents`
+	- When selecting the location of the project, choose the root folder `~/android/src/ros_android_intents`
 	- It will take a while to import and auto build -- stuff will be scrolling in the terminal window as it's working
 
 3. (Optional) Import `~/android/src/android_core` as a new project
