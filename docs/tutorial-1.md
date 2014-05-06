@@ -63,9 +63,10 @@
 		- Launch Android Studio and update the first time
 
 				$ studio.sh
+			- if you are asked if you want to keep your previous Android Studio settings, you may say “no”
 			- click on “Check for update” link at the bottom of the window and apply any upgrades
 			- Exit studio
-		- Install Ros Java (_Note: the catkin\_make step takes a while):
+		- Install Ros Java (\_Note: the catkin\_make step takes a while):
 
 				$ sudo apt-get install ros-hydro-catkin ros-hydro-ros ros-hydro-rosjava python-wstool
 				$ mkdir -p ~/android
