@@ -18,3 +18,5 @@ build-log.xml
 
 
 docs/.Ulysses-Group.plist
+/docs/.UlyssesRoot
+/.DS_Store
