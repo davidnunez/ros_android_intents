@@ -40,32 +40,37 @@
 				sudo apt-get install oracle-java7-installer
 				# Switch back to openjdk anytime with sudo update-alternatives --config java
 
-		2. Download [Android Studio Bundle](http://developer.android.com/sdk/installing/studio.html#download) (_as of 2014-05-05, version 135-1078000_) to `~/Downloads`
-		3. untar the download and add it to your path:
+		2. Download [Android Studio Bundle](http://developer.android.com/sdk/installing/studio.html#download) (_as of 2014-06-12, version 135-1078000_) to `~/Downloads`
+
+				cd ~/Downloads; http://dl.google.com/android/studio/install/0.5.2/android-studio-bundle-135.1078000-linux.tgz
+		3. untar the download and add it to your path (note: change `chown` command to use your username)
 
 				cd ~/Downloads
 				sudo tar -zxvf android-studio-bundle-135.1078000-linux.tgz -C /opt/
 				sudo chmod -R 755 /opt/android-studio
 				sudo chmod -R +x /opt/android-studio
-				sudo chown -R root:root /opt/android-studio
+				sudo chown -R prg:prg /opt/android-studio
 				echo export PATH=\${PATH}:/opt/android-studio/sdk/tools:/opt/android-studio/sdk/platform-tools:/opt/android-studio/bin >> ~/.bashrc
 				echo export ANDROID_HOME=/opt/android-studio/sdk >> ~/.bashrc
 				source ~/.bashrc
 			 
 		- Open the Android SDK manager and install (_this step takes a while_):
-
+			- Android SDK Tools 22.6.4
+			- Android SDK Platform-tools 19.0.2
 			- SDK Build Tools 19.0.2
 			- SDK Build Tools 19.0.3
+			- SDK Build Tools 19.1
 			- Android API 10
 			- Android API 13
 			- Android API 15
 			- Android API 16
 			- Android API 18
+			- Android API 19
 
-					sudo /opt/android-studio/sdk/tools/android
+					android
 		- Launch Android Studio and update the first time
 
-				sudo /opt/android-studio/bin/studio.sh
+				studio.sh
 			- if you are asked if you want to keep your previous Android Studio settings, you may say “no”
 			- click on “Check for update” link at the bottom of the window and apply any upgrades
 			- Exit studio
@@ -80,7 +85,11 @@
 3. Get ros\_android\_intents project
 
 		cd ~/android/src/
-		git clone https://github.com/personal-robots/ros_android_intents
+		git clone https://github.com/davidnunez/ros_android_intents
+4. Switch to Oracle Java
+
+		sudo update-alternatives --config java
+		# select /usr/lib/jvm/java-7-oracle/jre/bin/java  
  4. launch Android Studio
 
 		studio.sh
