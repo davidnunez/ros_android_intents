@@ -35,7 +35,6 @@ public class IntentHandlerActivity extends RosActivity {
      */
     @Override
     public void onCreate(Bundle savedInstanceState) {
-        registerReceiver(myReceiver, new IntentFilter("edu.mit.media.prg.ros_android_intents.intent_to_ros"));
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
     }
@@ -53,6 +52,8 @@ public class IntentHandlerActivity extends RosActivity {
 
     @Override
     protected void init(NodeMainExecutor nodeMainExecutor) {
+        registerReceiver(myReceiver, new IntentFilter("edu.mit.media.prg.ros_android_intents.intent_to_ros"));
+
         talker = new Talker();
         talker.setGraphName(getString(R.string.graphNameTalker));
 
