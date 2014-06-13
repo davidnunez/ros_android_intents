@@ -35,6 +35,11 @@ apply plugin: 'android'
 
 android {
     compileSdkVersion 13
+    packagingOptions {
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/NOTICE.txt'
+
+    }
 }
 
 repositories {
@@ -48,4 +53,5 @@ dependencies {
     compile 'org.ros.android_core:android_gingerbread_mr1:0.1.+'
     compile 'org.ros.android_core:android_honeycomb_mr2:0.1.+'
     compile 'org.ros.rosjava_core:rosjava:0.1.+'
+    compile files('libs/json-simple-1.1.1.jar')
 }
