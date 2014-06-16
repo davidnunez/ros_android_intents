@@ -1,0 +1,19 @@
+{
+    "connections":[
+        {
+            "topic":"ros_to_intent",
+            "action":"edu.mit.media.prg.ros_android_intents.ros_to_intent",
+            "talker": false,
+            "listener": true,
+            "type":"String"
+        },
+        {
+            "topic":"intent_to_ros",
+            "action":"edu.mit.media.prg.ros_android_intents.intent_to_ros",
+            "talker": true,
+            "listener": false,
+            "type":"String"
+        },
+
+    ]
+}

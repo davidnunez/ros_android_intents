@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">IntentHandler</string>
+    <string name="graphName">ros_android_intents</string>
     <string name="graphNameTalker">ros_android_intents/talker/1</string>
     <string name="graphNameListener">ros_android_intents/listener/1</string>
 </resources>
