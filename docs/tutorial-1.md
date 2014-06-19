@@ -42,7 +42,7 @@
 
 		2. Download [Android Studio Bundle](http://developer.android.com/sdk/installing/studio.html#download) (_as of 2014-06-12, version 135-1078000_) to `~/Downloads`
 
-				cd ~/Downloads; http://dl.google.com/android/studio/install/0.5.2/android-studio-bundle-135.1078000-linux.tgz
+				cd ~/Downloads; wget http://dl.google.com/android/studio/install/0.5.2/android-studio-bundle-135.1078000-linux.tgz
 		3. untar the download and add it to your path (note: change `chown` command to use your username)
 
 				cd ~/Downloads
